@@ -1,4 +1,4 @@
-const { toRoman } = require('../src/roman');
+const { toRomanNumeral } = require('../src/toRomanNumeral');
 
 test('convertit 1 en I', () => {
   expect(toRomanNumeral(1)).toBe('I');
