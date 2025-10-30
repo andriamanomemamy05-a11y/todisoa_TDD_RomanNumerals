@@ -1,13 +1,13 @@
-const { toRomanNumeral } = require('../src/toRomanNumeral');
+const { convertToRomanNumeral } = require('../src/convertToRomanNumeral');
 
 test('convertit 1 en I', () => {
-  expect(toRomanNumeral(1)).toBe('I');
+  expect(convertToRomanNumeral(1)).toBe('I');
 });
 
 test('convertit 2 en II', () => {
-  expect(toRomanNumeral(2)).toBe('II');
+  expect(convertToRomanNumeral(2)).toBe('II');
 });
 
 test('convertit 3 en III', () => {
-  expect(toRomanNumeral(3)).toBe('III');
+  expect(convertToRomanNumeral(3)).toBe('III');
 });
