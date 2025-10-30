@@ -15,9 +15,14 @@ J’ai ensuite refactoré le code en utilisant une table de correspondance pour 
 Cette approche TDD m’a permis d’avancer étape par étape avec des tests toujours verts.
 
 <!-- MES ETAPES DE COMMIT  -->
-. Initialisation du projet et "First commit" dans le repos
-. Ajout de l'arborescence
-. Premier test qui échoue : 🟥 RED — car le fichier toRomanNumeral n’existe pas encore dans le chemin indiqué.
-. Implémentation et correction du code minimale : 🟩 GREEN — Ajout et création de convertToRomanNumeral dans le dossier métier src
-. Ajout des commentaires et changement du nom de la fonction en plus lisible, optimisation des codes sans casser : REFACT
-. Refactoring finale , nettoyage , optimisation et commentaires du code
+- Initialisation du projet et "First commit" dans le repos
+  
+- Ajout de l'arborescence
+
+- Premier test qui échoue : 🟥 RED — car le fichier toRomanNumeral n’existe pas encore dans le chemin indiqué.
+  
+- Implémentation et correction du code minimale : 🟩 GREEN — Ajout et création de convertToRomanNumeral dans le dossier métier src
+  
+- Ajout des commentaires et changement du nom de la fonction en plus lisible, optimisation des codes sans casser : REFACT
+  
+- Refactoring finale , nettoyage , optimisation et commentaires du code
