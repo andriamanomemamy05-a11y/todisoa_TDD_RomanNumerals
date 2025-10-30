@@ -1,26 +1,36 @@
 function convertToRomanNumeral(n) {
+    
     // Vérifie que le nombre est dans la plage 1–3999
     if (n <= 0 || n >= 4000) throw new RangeError('Out of range');
 
-    // Table de correspondance pour les cas simples (unités)
-    const numerals = {
-        1: 'I',
-        4: 'IV',
-        5: 'V',
-        9: 'IX',
-    };
+    const map = [
+        { value: 1000, numeral: 'M' },
+        { value: 900, numeral: 'CM' },
+        { value: 500, numeral: 'D' },
+        { value: 400, numeral: 'CD' },
+        { value: 100, numeral: 'C' },
+        { value: 90, numeral: 'XC' },
+        { value: 50, numeral: 'L' },
+        { value: 40, numeral: 'XL' },
+        { value: 10, numeral: 'X' },
+        { value: 9, numeral: 'IX' },
+        { value: 5, numeral: 'V' },
+        { value: 4, numeral: 'IV' },
+        { value: 1, numeral: 'I' },
+    ];
 
-    // Test si le nombre correspond directement à une clé du dictionnaire
-    if (numerals[n]) return numerals[n];
+    let result = '';
 
-    // Test si le nombre est entre 2 et 3 → répète 'I'
-    if (n < 4) return 'I'.repeat(n);
-
-     // Test si le nombre est entre 6 et 8 → 'V' suivi de 'I' répété
-    if (n < 9) return 'V' + 'I'.repeat(n - 5);
-
-    // Sinon , on affiche erreur pour les autres cas non gérés
-    throw new Error('Not implemented');
+    // Parcours de la table pour construire le chiffre romain attendu
+    for (const { value, numeral } of map) {
+        // Tant que le nombre restant est supérieur ou égal à la valeur,
+        // on ajoute le symbole correspondant et on soustrait la valeur.
+        while (n >= value) {
+            result += numeral;
+            n -= value;
+        }
+    }
+    return result;
 }
 
 module.exports = { convertToRomanNumeral };
